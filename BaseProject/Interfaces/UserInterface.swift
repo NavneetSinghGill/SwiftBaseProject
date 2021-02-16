@@ -15,17 +15,20 @@ class UserInterface: BaseInterface {
         NetworkHttpClient.getAPIWith(url: request.urlSuffix, params: request.parameters, closure: {
             success, response, error in
             if success {
-                parseLogin(response: response)
+                self.parseLogin(response: response)
             } else if (error != nil) {
-                baseInterfaceClosure!(false, error?.localizedDescription, nil)
+                self.baseInterfaceClosure!(false, nil, error)
             } else if response != nil {
-                baseInterfaceClosure!(false, response, nil)
+                self.baseInterfaceClosure!(false, response, nil)
             }
         })
     }
     
     func parseLogin(response: Any?) {
-        print(response)
+        if let response = self.validateAndGetResponse(response: response) {
+            User.shared.save(response)
+            baseInterfaceClosure!(true, nil, nil)
+        }
     }
     
 }

@@ -43,6 +43,15 @@
 		F17E64C325DB514C00FFEBF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64C225DB514C00FFEBF4 /* Extensions.swift */; };
 		F17E64C425DB514C00FFEBF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64C225DB514C00FFEBF4 /* Extensions.swift */; };
 		F17E64C525DB514C00FFEBF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64C225DB514C00FFEBF4 /* Extensions.swift */; };
+		F17E64E025DB776000FFEBF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64DF25DB776000FFEBF4 /* MenuViewController.swift */; };
+		F17E64E125DB776000FFEBF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64DF25DB776000FFEBF4 /* MenuViewController.swift */; };
+		F17E64E225DB776000FFEBF4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64DF25DB776000FFEBF4 /* MenuViewController.swift */; };
+		F17E64F625DB7A7E00FFEBF4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64F425DB7A7E00FFEBF4 /* MenuTableViewCell.swift */; };
+		F17E64F725DB7A7E00FFEBF4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64F425DB7A7E00FFEBF4 /* MenuTableViewCell.swift */; };
+		F17E64F825DB7A7E00FFEBF4 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E64F425DB7A7E00FFEBF4 /* MenuTableViewCell.swift */; };
+		F17E64F925DB7A7E00FFEBF4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17E64F525DB7A7E00FFEBF4 /* MenuTableViewCell.xib */; };
+		F17E64FA25DB7A7E00FFEBF4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17E64F525DB7A7E00FFEBF4 /* MenuTableViewCell.xib */; };
+		F17E64FB25DB7A7E00FFEBF4 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17E64F525DB7A7E00FFEBF4 /* MenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +98,9 @@
 		F17E64B025D9E6C200FFEBF4 /* UserRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequestManager.swift; sourceTree = "<group>"; };
 		F17E64BA25DB4D1700FFEBF4 /* BaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInterface.swift; sourceTree = "<group>"; };
 		F17E64C225DB514C00FFEBF4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F17E64DF25DB776000FFEBF4 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F17E64F425DB7A7E00FFEBF4 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F17E64F525DB7A7E00FFEBF4 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +175,8 @@
 				F17E643125D9A7FC00FFEBF4 /* SceneDelegate.swift */,
 				F17E647D25D9C4D900FFEBF4 /* Constants.swift */,
 				F17E643325D9A7FC00FFEBF4 /* ViewController.swift */,
+				F17E64DF25DB776000FFEBF4 /* MenuViewController.swift */,
+				F17E64E625DB77D100FFEBF4 /* TableViewCells */,
 				F17E64C125DB513C00FFEBF4 /* Utility */,
 				F17E648425D9D28500FFEBF4 /* Requests */,
 				F17E64A525D9DD4900FFEBF4 /* Interfaces */,
@@ -235,6 +249,15 @@
 				F17E64C225DB514C00FFEBF4 /* Extensions.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		F17E64E625DB77D100FFEBF4 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F17E64F425DB7A7E00FFEBF4 /* MenuTableViewCell.swift */,
+				F17E64F525DB7A7E00FFEBF4 /* MenuTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +367,7 @@
 			files = (
 				F17E643C25D9A80300FFEBF4 /* LaunchScreen.storyboard in Resources */,
 				F17E643925D9A80300FFEBF4 /* Assets.xcassets in Resources */,
+				F17E64F925DB7A7E00FFEBF4 /* MenuTableViewCell.xib in Resources */,
 				F17E643725D9A7FC00FFEBF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17E64FA25DB7A7E00FFEBF4 /* MenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17E64FB25DB7A7E00FFEBF4 /* MenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,11 +439,13 @@
 			files = (
 				F17E64A125D9DC6100FFEBF4 /* BaseRequest.swift in Sources */,
 				F17E643425D9A7FC00FFEBF4 /* ViewController.swift in Sources */,
+				F17E64F625DB7A7E00FFEBF4 /* MenuTableViewCell.swift in Sources */,
 				F17E643025D9A7FC00FFEBF4 /* AppDelegate.swift in Sources */,
 				F17E643225D9A7FC00FFEBF4 /* SceneDelegate.swift in Sources */,
 				F17E647425D9C27A00FFEBF4 /* User.swift in Sources */,
 				F17E64BB25DB4D1700FFEBF4 /* BaseInterface.swift in Sources */,
 				F17E649025D9DBB700FFEBF4 /* UserRequest.swift in Sources */,
+				F17E64E025DB776000FFEBF4 /* MenuViewController.swift in Sources */,
 				F17E64C325DB514C00FFEBF4 /* Extensions.swift in Sources */,
 				F17E646C25D9B0EC00FFEBF4 /* NetworkHttpClient.swift in Sources */,
 				F17E64A725D9DD5800FFEBF4 /* UserInterface.swift in Sources */,
@@ -432,8 +460,10 @@
 			files = (
 				F17E644725D9A80400FFEBF4 /* BaseProjectTests.swift in Sources */,
 				F17E646D25D9B0EC00FFEBF4 /* NetworkHttpClient.swift in Sources */,
+				F17E64F725DB7A7E00FFEBF4 /* MenuTableViewCell.swift in Sources */,
 				F17E649125D9DBB700FFEBF4 /* UserRequest.swift in Sources */,
 				F17E648725D9D2AE00FFEBF4 /* BaseRequest.swift in Sources */,
+				F17E64E125DB776000FFEBF4 /* MenuViewController.swift in Sources */,
 				F17E647525D9C27A00FFEBF4 /* User.swift in Sources */,
 				F17E64C425DB514C00FFEBF4 /* Extensions.swift in Sources */,
 				F17E64A825D9DD5800FFEBF4 /* UserInterface.swift in Sources */,
@@ -449,8 +479,10 @@
 			files = (
 				F17E645225D9A80400FFEBF4 /* BaseProjectUITests.swift in Sources */,
 				F17E646E25D9B0EC00FFEBF4 /* NetworkHttpClient.swift in Sources */,
+				F17E64F825DB7A7E00FFEBF4 /* MenuTableViewCell.swift in Sources */,
 				F17E649225D9DBB700FFEBF4 /* UserRequest.swift in Sources */,
 				F17E648825D9D2AE00FFEBF4 /* BaseRequest.swift in Sources */,
+				F17E64E225DB776000FFEBF4 /* MenuViewController.swift in Sources */,
 				F17E647625D9C27A00FFEBF4 /* User.swift in Sources */,
 				F17E64C525DB514C00FFEBF4 /* Extensions.swift in Sources */,
 				F17E64A925D9DD5800FFEBF4 /* UserInterface.swift in Sources */,
