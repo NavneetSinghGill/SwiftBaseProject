@@ -40,9 +40,15 @@ class ViewController: UIViewController {
         if let email = emailTextField.text?.trim(),
            let password = passwordTextField.text?.trim() {
             UserRequestManager().loginWith(email, password) { (success, response, error) in
-                
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "OpenMenuController", sender: "LoginViewController")
+                }
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.destination)
     }
     
     //MARK: - Observers
