@@ -26,8 +26,8 @@ class MenuViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "MenuTableViewCell")
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-       refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
-       tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     @objc func refresh(_ sender: AnyObject) {
@@ -47,6 +47,19 @@ class MenuViewController: UIViewController {
             let loginViewController = storyBoard.instantiateViewController(identifier: "ViewController")
             let navigationController = UINavigationController(rootViewController: loginViewController)
             self.view.window?.rootViewController = navigationController
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y > 50 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.array.append(contentsOf: self.savedArray)
+                self.tableView.reloadData()
+            }
         }
     }
     
