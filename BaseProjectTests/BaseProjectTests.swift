@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import BaseProject
+@testable import SwiftBaseProject
 
 class BaseProjectTests: XCTestCase {
 

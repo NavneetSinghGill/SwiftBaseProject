@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iCp-pd-0Cb">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,67 +12,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftBaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Blue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXU-D3-hLY">
-                                <rect key="frame" x="20" y="431" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uIa-AG-GOa">
-                                <rect key="frame" x="20" y="485" width="374" height="34"/>
+                                <rect key="frame" x="20" y="459" width="350" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXP-aa-CSb">
-                                <rect key="frame" x="20" y="569" width="374" height="34"/>
+                                <rect key="frame" x="172.66666666666666" y="543" width="45" height="30"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
                                     <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFA-yW-DA0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXU-D3-hLY">
+                                <rect key="frame" x="20" y="405" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="UXU-D3-hLY" firstAttribute="centerY" secondItem="uIa-AG-GOa" secondAttribute="centerY" id="0IH-a8-ope"/>
                             <constraint firstItem="uIa-AG-GOa" firstAttribute="top" secondItem="UXU-D3-hLY" secondAttribute="bottom" constant="20" id="3U9-se-Tbc"/>
+                            <constraint firstItem="uIa-AG-GOa" firstAttribute="width" secondItem="UXU-D3-hLY" secondAttribute="width" id="4DD-04-oTU"/>
+                            <constraint firstItem="RXP-aa-CSb" firstAttribute="top" secondItem="uIa-AG-GOa" secondAttribute="bottom" constant="50" id="4gR-Mq-QHx"/>
                             <constraint firstItem="UXU-D3-hLY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4o2-YB-47s"/>
-                            <constraint firstItem="RXP-aa-CSb" firstAttribute="trailing" secondItem="UXU-D3-hLY" secondAttribute="trailing" id="9FT-Qf-ND6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UXU-D3-hLY" secondAttribute="trailing" constant="20" id="A99-zt-8tF"/>
                             <constraint firstItem="uIa-AG-GOa" firstAttribute="height" secondItem="UXU-D3-hLY" secondAttribute="height" id="JU6-OL-Nzt"/>
+                            <constraint firstItem="uIa-AG-GOa" firstAttribute="leading" secondItem="UXU-D3-hLY" secondAttribute="trailing" constant="20" id="KDj-kf-TWz"/>
                             <constraint firstItem="uIa-AG-GOa" firstAttribute="leading" secondItem="UXU-D3-hLY" secondAttribute="leading" id="LAq-MJ-62s"/>
-                            <constraint firstItem="UXU-D3-hLY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LdH-sF-uNg"/>
-                            <constraint firstItem="RXP-aa-CSb" firstAttribute="leading" secondItem="UXU-D3-hLY" secondAttribute="leading" id="SuB-Vb-fVM"/>
-                            <constraint firstItem="RXP-aa-CSb" firstAttribute="top" secondItem="uIa-AG-GOa" secondAttribute="bottom" constant="50" id="aXj-PY-dXq"/>
-                            <constraint firstItem="uIa-AG-GOa" firstAttribute="trailing" secondItem="UXU-D3-hLY" secondAttribute="trailing" id="eRV-KZ-dmB"/>
-                            <constraint firstItem="RXP-aa-CSb" firstAttribute="height" secondItem="UXU-D3-hLY" secondAttribute="height" id="jde-pb-nzb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uIa-AG-GOa" secondAttribute="trailing" constant="20" id="Snl-Ux-fe0"/>
+                            <constraint firstItem="UXU-D3-hLY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ftZ-5O-sUb"/>
+                            <constraint firstItem="RXP-aa-CSb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="twm-5R-5Qj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0IH-a8-ope"/>
+                                <exclude reference="4DD-04-oTU"/>
+                                <exclude reference="KDj-kf-TWz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="A99-zt-8tF"/>
+                                <include reference="0IH-a8-ope"/>
+                                <exclude reference="3U9-se-Tbc"/>
+                                <include reference="4DD-04-oTU"/>
+                                <include reference="KDj-kf-TWz"/>
+                                <exclude reference="LAq-MJ-62s"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="M0t-ie-z0w"/>
                     <connections>
                         <outlet property="emailTextField" destination="UXU-D3-hLY" id="prD-vC-PfI"/>
                         <outlet property="passwordTextField" destination="uIa-AG-GOa" id="siZ-nL-1y8"/>
-                        <outlet property="verticalAlignConstraint" destination="LdH-sF-uNg" id="Uc9-jR-apN"/>
+                        <outlet property="verticalAlignConstraint" destination="ftZ-5O-sUb" id="Hep-jh-cgP"/>
                         <segue destination="Lum-rm-2Xe" kind="show" identifier="OpenMenuController" id="flT-LQ-9O5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="81.696428571428569"/>
+            <point key="canvasLocation" x="1050.7109004739336" y="81.538461538461533"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="thP-P5-Dcl">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="Lum-rm-2Xe" customClass="MenuViewController" customModule="SwiftBaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="Lum-rm-2Xe" customClass="MenuViewController" customModule="Blue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UFs-l1-YUW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lFS-0M-NqS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Lum-rm-2Xe" id="0xO-hJ-ird"/>
@@ -79,7 +98,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9T-DU-lvV">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="750" width="390" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="W8c-wY-wnN"/>
                                 </constraints>
@@ -116,7 +135,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iCp-pd-0Cb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nmu-we-LAG">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

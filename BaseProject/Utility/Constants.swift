@@ -12,11 +12,11 @@ typealias responseClosure = (_ success: Bool, _ response: Any?, _ error: Error?)
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-//MARK: - User
+//MARK: - API keys
 let kAccessToken = "accessToken"
 let kIsLoggedIn = "isLoggedIn"
 
-//MARK: - URL
+//MARK: - URLs
 let kStagingURL = "http://127.0.0.1:3000"
 
 let kLoginURL = "/login"

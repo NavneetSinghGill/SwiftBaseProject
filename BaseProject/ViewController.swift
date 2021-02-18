@@ -17,17 +17,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         emailTextField.text = "asdada"
         passwordTextField.text = "123123"
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,7 +59,7 @@ class ViewController: UIViewController {
     
     @objc func keyboardWillShow(notification: Notification) {
         let keyboardHeight = (notification.userInfo!["UIKeyboardFrameEndUserInfoKey"]! as! CGRect).size.height
-        let bottomOfTextfield = passwordTextField.frame.origin.y + passwordTextField.frame.size.height + 5
+        let bottomOfTextfield = passwordTextField.frame.origin.y + passwordTextField.frame.size.height + 80
         let adjustmentValue = bottomOfTextfield - (self.view.frame.size.height - keyboardHeight)
         
         if adjustmentValue > 0 {
